@@ -11,13 +11,13 @@ if camera_image:
     img = Image.open(camera_image)  # camera_image used as arg for the PIL image(Will give us a PIL image type)
 
     # Converts the image to grayscale
-    out = st.image.point(lambda i: i * 20)  # "L"(notion) one of the algorithms that converts to grayscale
+    gray_img = img.convert("L")  # "L"(notion) one of the algorithms that converts to grayscale
     # gray_img = img.convert("L")
     # display the grayscale on the webpage
-    st.image(out)
+    st.image(gray_img)
     # st.image(gray_img)
 
-
+# out = st.image.point(lambda i: i * 20)
 # gray_img = img.convert("L")
 # multiply each pixel by 20
 # out = im.point(lambda i: i * 20)
